@@ -1,0 +1,128 @@
+/* Variables globales */
+:root {
+  --color-black: #000000;
+  --color-white: #ffffff;
+  --primary-color: #b8ed00;
+  --text-color: var(--color-white);
+  --bg-color: var(--color-black);
+  --spacing-base: 1rem;
+  --container-max-width: 1200px;
+}
+
+/* Reset y estilos base */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  line-height: 1.6;
+}
+
+/* Componente: Navbar */
+.navbar {
+  background-color: var(--primary-color);
+  padding: calc(var(--spacing-base) * 0.75) calc(var(--spacing-base) * 2);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.container-fluid {
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: 0 var(--spacing-base);
+}
+
+.navbar-nav {
+  gap: calc(var(--spacing-base) * 1.5);
+}
+
+.nav-link {
+  color: var(--color-black);
+  font-weight: 500;
+  transition: color 0.3s ease;
+  font-size: clamp(0.9rem, 1vw, 1.1rem);
+  white-space: nowrap;
+  padding: 0.5rem 0.75rem;
+}
+
+.nav-link:hover {
+  color: var(--color-white);
+}
+
+.navbar-brand img {
+    height: 40px;
+    width: auto;
+    object-fit: contain;
+}
+
+.btn-login-area {
+  background-color: var(--color-black);
+  color: var(--color-white);
+  border-radius: 4px;
+  padding: calc(var(--spacing-base) * 0.5) var(--spacing-base);
+  transition: all 0.3s ease;
+  font-size: 1.1rem;
+}
+
+.btn-login-area:hover {
+  background-color: var(--color-white);
+  color: var(--color-black);
+}
+
+/* Componente: Header */
+.header-primary {
+  background-color: var(--bg-color);
+  padding: calc(var(--spacing-base) * 3) 0;
+}
+
+/* Componente: Main Content */
+.content-section,
+.sidebar {
+  padding: var(--spacing-base);
+}
+
+/* Componente: Footer */
+.web-footer {
+  background-color: #343a40;
+  margin-top: auto;
+}
+
+/* Media Queries */
+@media (max-width: 991.98px) {
+  .navbar-nav {
+    gap: var(--spacing-base);
+    padding-top: 0.5rem; 
+  }
+  
+  .nav-item:first-child {
+    margin-top: 0.5rem; 
+  }
+
+  .container-fluid {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-base);
+  }
+}
+
+@media (max-width: 1200px) {
+  .navbar-nav {
+    gap: calc(var(--spacing-base) * 0.75);
+  }
+  
+  .nav-link {
+    padding-left: calc(var(--spacing-base) * 0.4);
+    padding-right: calc(var(--spacing-base) * 0.4);
+  }
+}
+
+
+
+
+
